@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "nodemon --exec ts-node src/api.ts",
     "build": "tsc",
-    "start": "node dist/api.js",
+    "start": "node dist/src/api.js",
     "docker:start": "docker compose up -d",
+    "docker:db:kill": "docker rm -f postgres-db || true",
     "docker:stop": "docker compose stop",
     "docker:clean": "docker compose rm -fsv",
-    "coverage": "npx nyc --reporter=lcov --reporter=text ts-node src/signup.ts"
+    "coverage": "npx nyc --reporter=lcov --reporter=text ts-node src/signup.ts",
+    "test": "jest --config=jest.config.mjs",
+    "test:unit": "jest --config=jest.unit.config.mjs",
+    "test:integration": "jest --config=jest.integration.config.mjs"
   },
   "keywords": [],
   "author": "",
