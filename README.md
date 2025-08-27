@@ -41,9 +41,8 @@ test/
 
 ## 🎯 Como rodar
 
-### 🔙 Backend (`/server`)
+### 🔙 Backend
 ```bash
-cd server
 yarn
 yarn docker:start
 yarn dev
