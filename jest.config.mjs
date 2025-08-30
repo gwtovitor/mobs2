@@ -1,6 +1,5 @@
 /** @type {import('jest').Config} */
 export default {
-  // ESM + TS
   preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'node',
   transform: {
@@ -12,10 +11,8 @@ export default {
       },
     ],
   },
-  // Trata .ts como ESM
   extensionsToTreatAsEsm: ['.ts'],
 
-  // Ajuste para imports relativos "sem .js" gerados pelo TS
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
